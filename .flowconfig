@@ -1,0 +1,13 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/ast-types-flow/
+<PROJECT_ROOT>/node_modules/react-scripts/
+<PROJECT_ROOT>/node_modules/promise
+<PROJECT_ROOT>/node_modules/invariant
+<PROJECT_ROOT>/node_modules/rst-selector-parser
+
+[include]
+
+[libs]
+
+[options]
+module.name_mapper='.*\(.css\)' -> 'empty/object'

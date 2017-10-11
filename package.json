@@ -1,11 +1,11 @@
 {
   "name": "musiccompass",
+  "author": "Sean Wilksinson <swilkinson09@gmail.com>",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "eslint": "^4.8.0",
+    "empty": "^0.10.1",
     "global": "^4.3.2",
-    "prettier": "^1.7.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14"
@@ -13,18 +13,46 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject",
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet"
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "test:coverage": "jest --coverage",
+    "test:update": "jest -u"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/utils/enzyme_setup"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/src/utils/cssStub.js"
+    }
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "enzyme-to-json": "^3.0.0-beta6",
+    "eslint": "^4.8.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-react": "^7.4.0"
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.56.0",
+    "jest": "^21.2.1",
+    "jest-enzyme": "^4.0.1",
+    "jest-serializer-enzyme": "^1.0.0",
+    "prettier": "^1.7.4",
+    "react-test-renderer": "^16.0.0"
   }
 }

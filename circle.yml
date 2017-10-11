@@ -3,7 +3,7 @@ machine:
     version: 6.0.0
 test:
   override:
-    - npm install babel-eslint
+    - flow
     - eslint /home/ubuntu/musiccompass --quiet # May need to be updated
     - npm test -- --coverage
   post:
