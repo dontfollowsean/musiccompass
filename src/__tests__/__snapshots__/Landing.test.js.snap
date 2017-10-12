@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="landing"
+>
+  <h1>
+    Travel with music
+  </h1>
+  <h3>
+    Create the local playlist of your dreams. Try it! 
+  </h3>
+  <SearchBox />
+</div>
+`;

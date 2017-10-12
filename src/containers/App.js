@@ -1,17 +1,18 @@
 // @flow
 
 import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Header from '../components/Header';
+import Landing from './Landing';
 import './App.css';
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <h1 className="App-title">Welcome to React</h1>
-    </header>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-  </div>
+	<MuiThemeProvider>
+		<div className="App">
+			<Header />
+			<Landing />
+		</div>
+	</MuiThemeProvider>
 );
 
 export default App;
