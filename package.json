@@ -1,6 +1,6 @@
 {
   "name": "musiccompass",
-  "author": "Sean Wilksinson <swilkinson09@gmail.com>",
+  "author": "Sean Wilkinson <swilkinson09@gmail.com>",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
