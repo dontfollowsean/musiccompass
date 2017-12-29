@@ -5,7 +5,6 @@ import YouTube from 'react-youtube';
 import { setInterval } from 'timers';
 import SearchBox from '../components/SearchBox';
 import './Landing.css';
-// import '../utils/youtubePlayerApi';
 
 const videoOptions = {
 	playerVars: {
@@ -31,20 +30,24 @@ const onReady = event => {
 	});
 	event.target.playVideo();
 };
+
 const onPlay = event => {
+	// TODO: make video visible on play
 	event.target.setShuffle(true);
 	setInterval(() => {
 		event.target.nextVideo();
-		// event.target.seekTo(30);
 	}, 30000);
-}; // TODO: make video visible
+}; 
+
 const onChange = () => {
-	// console.log(`statechange: ${event}`);
-}; // TODO: when video cued, seekTo 60 seconds
-const onEnd = () => {}; // TODO: hide video to hide buffering
+	// TODO: when video cued, seekTo 60 seconds
+}; 
+
 const onError = err => {
+	// TODO: display static image
 	console.log(err);
-}; // TODO: display static image
+}; 
+
 const Landing = () => (
 	<div className="landing">
 		<h1>Travel with music</h1>
@@ -56,7 +59,6 @@ const Landing = () => (
 				opts={videoOptions}
 				onReady={onReady}
 				onPlay={onPlay}
-				onEnd={onEnd}
 				onError={onError}
 				onStateChange={onChange}
 			/>
