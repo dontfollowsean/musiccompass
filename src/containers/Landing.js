@@ -2,7 +2,6 @@
 
 import React from 'react';
 import YouTube from 'react-youtube';
-import { setInterval } from 'timers';
 import SearchBox from '../components/SearchBox';
 import './Landing.css';
 
