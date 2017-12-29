@@ -4,6 +4,7 @@
 <PROJECT_ROOT>/node_modules/promise
 <PROJECT_ROOT>/node_modules/invariant
 <PROJECT_ROOT>/node_modules/rst-selector-parser
+<PROJECT_ROOT>/node_modules/youtube-player
 
 [include]
 
